@@ -15,7 +15,7 @@ class CQLSelectQualifiersSQLite extends CQLSelectQualifiers {
           first = Utils.instance.concat(['LIMIT', element.value.toString()]);
           break;
         case SelectQualifierType.sqSkip:
-          first = Utils.instance.concat(['OFFSET', element.value.toString()]);
+          skip = Utils.instance.concat(['OFFSET', element.value.toString()]);
           break;
         default:
           throw Exception(
